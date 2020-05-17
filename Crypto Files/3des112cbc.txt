@@ -1,0 +1,20 @@
+---BEGIN OS2 CRYPTO DATA---
+Description:
+    Secret key
+
+Method:
+    DESede
+
+Mode:
+    CBC
+
+Initialization vector:
+    d61e6611197cb829
+
+Key length:
+    70
+
+Secret key:
+    547f5eecf7fd38ef6ba2cb586eba1f7c547f5eecf7fd38ef
+
+---END OS2 CRYPTO DATA---

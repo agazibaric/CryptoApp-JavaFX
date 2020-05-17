@@ -1,0 +1,21 @@
+---BEGIN OS2 CRYPTO DATA---
+Description:
+    Secret key
+
+Method:
+    AES
+
+Mode:
+    CTR
+
+Initialization vector:
+    6a9df3a47fd472e126444218dcc294f8
+
+Key length:
+    100
+
+Secret key:
+    bfeeb93af8a7863b3b92b7468105e46dc00d75484b50743bd956da0616b5
+    50f2
+
+---END OS2 CRYPTO DATA---

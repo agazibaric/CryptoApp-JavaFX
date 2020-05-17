@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AlgorithmController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: 000000;">
+               <top>
+                  <HBox BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="708.0" style="-fx-background-color: #20BF55;" text="CREATE SYMMETRIC ALGORITHM FILE" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Region prefHeight="0.0" prefWidth="87.0" style="-fx-background-color: #20BF55;" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <ComboBox fx:id="symAlgCombo" onAction="#symAlgorithmChanged" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="ALGORITHM" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="symCreateBtn" mnemonicParsing="false" onAction="#onSymCreate" text="CREATE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Button>
+                        <ComboBox fx:id="symModeCombo" layoutX="191.0" layoutY="27.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin></ComboBox>
+                        <ComboBox fx:id="symKeyCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="KEY SIZE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="MODE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="symDestBtn" mnemonicParsing="false" onAction="#symDestChoose" text="SELECT DESTINATION" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="labelSecret" text="File is not selected" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </center></BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <ComboBox fx:id="asymAlgCombo" onAction="#asymAlgorithmChanged" prefWidth="150.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="ALGORITHM" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="asymCreateBtn" mnemonicParsing="false" onAction="#onAsymCreate" text="CREATE" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Button>
+                        <ComboBox fx:id="asymKeyCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="KEY SIZE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#asymPublicChoose" text="SELECT PUBLIC KEY DESTINATION" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#asymPrivateChoose" text="SELECT PRIVATE KEY DESTINATION" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="labelPrivate" text="File is not selected" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Label fx:id="labelPublic" text="File is not selected" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </center>
+               <top>
+                  <HBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="715.0" style="-fx-background-color: #20BF55;" text="CREATE ASYMMETRIC ALGORITHM FILE" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="0.0" prefWidth="87.0" style="-fx-background-color: #20BF55;" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

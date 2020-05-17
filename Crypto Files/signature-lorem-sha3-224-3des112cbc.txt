@@ -1,0 +1,21 @@
+---BEGIN OS2 CRYPTO DATA---
+Description:
+    Signature
+
+File name:
+    .\Crypto Files\lorem.txt
+
+Method:
+    SHA3
+    DESede
+
+Key length:
+    e0
+    70
+
+Signature:
+    6574766937453758455255674d332b497579564a415448522f4b742b6862
+    306169453649453367447035497648634a6472724c465146367577546a42
+    34724671
+
+---END OS2 CRYPTO DATA---

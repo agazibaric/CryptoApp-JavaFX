@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CryptController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: 000000;">
+               <top>
+                  <HBox BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="708.0" style="-fx-background-color: #757761;" text="ENCRYPT A FILE" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Region prefHeight="0.0" prefWidth="87.0" style="-fx-background-color: #757761;" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <ComboBox fx:id="symEncryptCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="SYMMETRIC ALGORITHM:" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#onEncrypt" text="ENCRYPT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#onPublicKeyLoad" text="LOAD PUBLIC KEY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onSecretKeyEncryptLoad" text="LOAD SECRET KEY" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label text="ASYMMETRIC ALGORITHM:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="asymEncryptCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Button mnemonicParsing="false" onAction="#showMoreSecretEncrypt" text="SHOW MORE" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#showMorePublic" text="SHOW MORE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onSelectDestinationEncrypt" text="SELECT DESTINATION" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#onSelectFileEncrypt" text="SELECT FILE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <Label text="ORIGINAL FILE:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="DESTINATION:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="symEncrypt" mnemonicParsing="false" selected="true" text="Symmetric" GridPane.halignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="selectAlgEncrypt" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Asymmetric" toggleGroup="$selectAlgEncrypt" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </RadioButton>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </GridPane.margin>
+                        </GridPane>
+                        <Label fx:id="labelFile" text="File is not selected" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Label fx:id="labelDestEncrypt" text="File is not selected" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </center></BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </BorderPane.margin>
+                     <children>
+                        <ComboBox fx:id="symDecryptCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="SYMMETRIC ALGORITHM:" GridPane.halignment="RIGHT">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#onDecrypt" text="DECRYPT" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#onPrivateKeyLoad" text="LOAD PRIVATE KEY" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onSecretKeyDecryptLoad" text="LOAD SECRET KEY" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label text="ASYMMETRIC ALGORITHM:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="asymDecryptCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Button mnemonicParsing="false" onAction="#showMoreSecretDecrypt" text="SHOW MORE" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#showMorePrivate" text="SHOW MORE" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onSelectDestinationDecrypt" text="SELECT DESTINATION" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#onSelectFileDecrypt" text="SELECT FILE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin></Button>
+                        <Label text="ENCRYPTED FILE:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="DESTINATION:" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="symDecrypt" mnemonicParsing="false" selected="true" text="Symmetric" GridPane.halignment="CENTER">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="selectAlgDecrypt" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="Asymmetric" toggleGroup="$selectAlgDecrypt" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                 </GridPane.margin>
+                              </RadioButton>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="labelEncrypted" text="File is not selected" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                        <Label fx:id="labelDestDecrypt" text="File is not selected" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </center>
+               <top>
+                  <HBox BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="715.0" style="-fx-background-color: #757761;" text="DECRYPT A FILE" textFill="WHITE">
+                           <padding>
+                              <Insets bottom="10.0" left="50.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="0.0" prefWidth="87.0" style="-fx-background-color: #757761;" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </top>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

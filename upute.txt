@@ -1,0 +1,12 @@
+Ante Gazibarić, 0036499910
+
+Zadaća je napisana u programskom jeziku Java 11.
+Vrsta projekta je Maven.
+Grafičko sučelje je ostvareno koristeći JavaFX framework
+(dodano kao maven dependecy i plugin za pokretanje).
+
+Dodatna napomena:
+Za pokretanje potrebno je stvoriti maven konfiguraciju (Create Run/Debug Configuration)
+na način da se izmijeni postojeća maven konfiguracija "exec:java" upisivanjem u 
+"Command line" polje: "compile exec:java -f pom.xml"
+

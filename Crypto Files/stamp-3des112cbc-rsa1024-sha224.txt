@@ -1,0 +1,22 @@
+---BEGIN OS2 CRYPTO DATA---
+Description:
+    Signature
+
+File name:
+    .\Crypto Files\envelope-stamp-3des112cbc-rsa1024-sha3-224.tx
+    t
+
+Method:
+    SHA3
+    DESede
+
+Key length:
+    e0
+    70
+
+Signature:
+    4e70705a6832634b6d31317a70663671362f774e6c6b416e4d6a48526657
+    6f4f75526c6665487874337a62517063332b4d5167324e395576306d4552
+    77766d6a
+
+---END OS2 CRYPTO DATA---
